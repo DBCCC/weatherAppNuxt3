@@ -1,0 +1,343 @@
+body{
+    background: rgb(35,70,185);
+    margin: 0;
+    padding: 0px;
+    color: white;
+}
+
+/*Animation */
+.loadingAnimationWrapper{
+    display: flex;
+    width: 100%;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+    h2{ margin-top: 10px;
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+/* WeatherViewer CSS */
+.mainContainer{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.mainContainerWrapper{
+  padding: 30px;
+  position: relative;
+  width: 800px;
+}
+
+.savedLocationButton{
+  position: absolute;
+  right: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  top: 0px;
+  padding: 12px 12px 12px 12px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #F5A519;
+  color: black;
+}
+.savedLocationButton:hover{
+  background-color: white;
+}
+
+.locationAdded{
+  position: absolute;
+  right: 30px;
+  top: 0px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 12px 12px 12px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: white;
+  color: black;
+}
+
+.backToSearchComp{
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 12px 12px 12px;
+  border-radius: 20px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: #F5A519;
+  .searchButton{
+      border-radius: 5px;
+      color: black;
+  }
+
+}
+.backToSearchComp:hover{
+      background-color: white;
+  }
+/* WeatherViewer CSS end*/
+
+/* todaysWeather CSS */
+
+.todaysWeatherMain {
+  margin-top: 30px;
+}
+
+.todayWeatherContainer {
+
+
+  .todayWeatherItem {
+      margin-top: 25px;
+      height: 140px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-radius: 5px;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      justify-content: space-between;
+      background-color: #1946A0;
+
+      span {
+          font-size: 14px;
+      }
+
+      img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+      }
+  }
+}
+/* todaysWeather CSS end*/
+/* SearchForm CSS */
+
+.searchComponentWrapper{
+  width: 100vw;
+  height: 90vh;
+}
+
+::placeholder {
+color: #9F9EA0;
+font-size: 15px;
+font-weight: 500;
+}
+.searchContainer{
+  color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .savedLocationsContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color:white;
+      margin-top: 20px;
+      h3{
+          padding-top: 20px;
+          font-size: 25px;
+      }
+      .locationItemWrapper{
+          width:100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-self: self-start;
+          gap: 20px;
+          text-align: center;
+          margin-top: 40px;
+          .locationItems{
+              width: max-content;
+              padding: 10px 50px 10px 50px;
+              background-color: #1950A0;
+              border-radius: 3px;
+          }
+      }
+  }
+
+
+  .serachInput{
+      position: relative;
+      width: 50%;
+      height: 60px;
+      input{
+          padding: 0px 55px 0px 40px;
+          height: 100%;
+          border-radius: 3px;
+      }
+      svg{
+          position: absolute;
+          left: 10px;
+          top: 20px;
+          color: #9F9EA0;
+      }
+      .searchRightSide{
+          position: absolute;
+          display: flex;
+          align-items:center;
+          justify-content: center;
+          height: 60px;
+          width: 50px;
+          right: 0px;
+          top: 0px;
+          padding-bottom: 15px;
+          padding-top: 15px;
+          .searchButton{
+              position: relative;
+              width: 100%;
+              height: 100%;
+              border-left: 1px solid #e7e0e0;
+              button{
+                  width: 100%;
+                  height: 100%;
+                  svg{
+                  position: absolute;
+                  margin: auto;
+                  inset: 0;
+              }
+              }
+              
+          }
+      }
+  }
+}
+
+/* SearchForm CSS end*/
+/* nextDays CSS*/
+.nextDaysContainer{
+  margin-top: 30px;
+}
+
+table{
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  tr{
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #1946A0;
+      td{
+          padding: 15px;
+          width: 150px;
+          .dayFormatWrapper{
+              width: 40px;
+              line-height: 1.5;
+          }
+          img{
+              width: 50px;
+              height: 50px;
+              object-fit: cover;
+          }
+          div{
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              text-align: center;
+              span{
+                  font-size: 13px;
+                  color: lightgray;
+              }
+          }
+      }
+  }
+}
+
+/* nextDays CSS end*/
+/* headerofMain CSS*/
+.headerSection{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h1{
+      font-size: 30px;
+  }
+  span{
+      font-size: 15px;
+  }
+}
+
+.currentInformation{
+  display: flex;
+  align-items:start;
+  gap: 50px;
+  margin-top: 30px;
+  .currentInfoLeftSide{
+      display: flex;
+      width: 50%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      padding-left: 20px;
+      img{
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+      }
+      .weatherInfo{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span{
+              margin-top: 10px;
+              font-size: 15px;
+          }
+          ::first-letter{
+                  text-transform: uppercase;
+              }
+          h3{
+              font-size: 60px;
+          }
+      }
+  }
+  .seperator{
+      height: 100px;
+      width: 2px;
+      background-color: rgb(189, 185, 185);
+      opacity: 20%;
+  }
+  .currentInfoRightSide{
+      display: flex;
+      gap: 30px;
+      flex: 1;
+
+      flex-wrap: wrap;
+      width: 50%;
+      .currentInfoItem{
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+          width: 69px;
+
+          .currentInfoItemKeys{
+              font-size: 13px;
+              color: rgb(206, 202, 202);
+          }
+          .currentInfoItemValue{
+              font-size: 16px;
+          }   
+      }
+  }
+}
+
+/* headerofMain CSS end*/

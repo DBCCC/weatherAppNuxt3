@@ -1,0 +1,39 @@
+@media screen and (max-width: 800px) {
+    .currentInformation {
+      flex-direction: column;
+      gap: 10px !important;
+    }
+    .mainContainerWrapper{
+        width: 100% !important;
+    }
+
+    .seperator{
+        width: 100% !important;
+        height: 2px !important;
+    } 
+
+    .currentInfoRightSide{
+        flex-wrap: wrap !important;
+        width: 100% !important;
+    }
+
+    td{
+        padding: 5px !important;
+        font-size: 10px !important;
+        img{
+            width: 30px !important;
+            height: 30px !important;
+            object-fit: cover;
+        }
+        span{
+            font-size: 10px !important;
+        }
+    }
+    .backToSearchComp{
+        left: 10% !important;
+    }
+
+    .serachInput{
+        width: 80% !important;
+    }
+}
