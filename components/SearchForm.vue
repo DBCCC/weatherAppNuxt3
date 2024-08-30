@@ -39,7 +39,7 @@
           </div>
         </div>
         <!-- Saved Cities Container -->
-        <div v-if="cities" class="savedLocationsContainer">
+        <div v-if="cities&&cities.length>0" class="savedLocationsContainer">
           <h3>Saved Locations :</h3>
           <div class="locationItemWrapper">
             <CityList @updateData="searchWeather" />
