@@ -39,6 +39,7 @@ body{
 
 .savedLocationButton{
   position: absolute;
+  width: 150px;
   right: 30px;
   font-size: 13px;
   font-weight: 600;
@@ -57,6 +58,7 @@ body{
 .locationAdded{
   position: absolute;
   right: 30px;
+  width: 150px;
   top: 0px;
   font-size: 13px;
   font-weight: 600;
@@ -70,7 +72,9 @@ body{
 
 .backToSearchComp{
   position: absolute;
-  left: 50%;
+  width: 150px;
+  text-align: center;
+  left: 58%;
   top: 0px;
   font-size: 13px;
   font-weight: 600;
