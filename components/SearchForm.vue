@@ -53,20 +53,21 @@
 <script setup>
 import { ref, defineEmits } from "vue";
 import { useFetch } from "#app";
-import { useSavedLocationStore } from "~/stores/savedLocations";
 import CityList from "./CityList.vue";
+import { useStorageStore } from "~/stores/storageService";
 //Required Variables
-const savedLocationStore = useSavedLocationStore();
 const searchValue = ref(null);
 const weather = ref(null);
 const error = ref(null);
 const emit = defineEmits(["dataFetched"]);
 
 
-//Get saved cities from store
+const storageService = useStorageStore();
+
 const savedLocations = computed(() => {
-  return savedLocationStore.getLocations;
-});
+  return storageService.get();
+})
+
 
 //Fetch Weather Data from API
 async function searchWeather(item) {

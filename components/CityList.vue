@@ -8,17 +8,22 @@
 
 <script setup>
 import { defineEmits } from "vue";
-import { useSavedLocationStore } from "~/stores/savedLocations";
-const savedLocationStore = useSavedLocationStore();
-const emit = defineEmits();
+import { useStorageStore } from "~/stores/storageService";
+
+const storageService = useStorageStore();
+
+const savedLocations = computed(() => {
+  return storageService.get();
+})
+const emits = defineEmits(['updateData']);
+
+
 
 //Function to retrieve the saved cities from the store.
-const savedLocations = computed(() => {
-  return savedLocationStore.getLocations;
-});
+
 //Emit function to send the selected city's data to the API.
 const sendSavedLocationsData = (item) => {
   const data = item;
-  emit("updateData", data);
+  emits("updateData", data);
 };
 </script>
