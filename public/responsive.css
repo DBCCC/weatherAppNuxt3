@@ -3,6 +3,11 @@
       flex-direction: column;
       gap: 10px !important;
     }
+    .weatherInfo{
+        h3{
+            font-size: 35px !important;
+        }
+    }
     .mainContainerWrapper{
         width: 100% !important;
     }
@@ -30,10 +35,19 @@
         }
     }
     .backToSearchComp{
-        left: 10% !important;
+        left: 0 !important;
+        padding: 8px !important; 
     }
 
     .serachInput{
         width: 80% !important;
+    }
+    .savedLocationButton{
+        right: 0px !important;
+        padding: 8px !important; 
+    }
+    .locationAdded{
+        right: 0px !important;
+        padding: 8px !important; 
     }
 }

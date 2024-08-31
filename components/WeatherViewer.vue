@@ -69,8 +69,6 @@ const saveLocation = () => {
   storageService.set(savedLocations.value);
 };
 const removeLocation = async () => {
-  console.log("lsdldsflkşslkdf");
-  
   savedLocationStore.removeLocation(currentWeather.value);
   savedLocations.value =  await storageService.get() ?? [];
 };
