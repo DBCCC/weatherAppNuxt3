@@ -50,7 +50,7 @@ const nextDaysData = computed(() => weatherStore.getNextDays);
 
 
 
-
+// Function to check if the location has been saved before
 const isInSaved = computed(() => {
   savedLocations.value = storageService.get() ?? []
   return savedLocations.value.some(el => el.id === currentWeather.value?.id);
@@ -74,7 +74,6 @@ const removeLocation = async () => {
 };
 
 onMounted(async () => {
-  // localStorage'dan kaydedilmiş konumları getir ve kontrol et
   savedLocations.value = await storageService.get() ?? [];
 });
 </script>
